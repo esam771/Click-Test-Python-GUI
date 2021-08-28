@@ -5,7 +5,7 @@ import timeit
 
 clicks = -1
 zero_time = 0
-# tkinter is so bad
+# tkinter is so bad and I have no idea what I am doing :)
 
 
 class App(ttk.Frame):
