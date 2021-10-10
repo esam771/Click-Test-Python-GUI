@@ -14,23 +14,19 @@ class App(ttk.Frame):
         master.wm_geometry('1080x720')
         self.frame = f = tk.Frame(self, width=83, height=32, relief=tk.SUNKEN, borderwidth=1, bg='pink')
         b = ttk.Button(f, text="Click", command=self.move_frame)
-        # e = ttk.Button(f, text="exit", command=self.exit_button)
-
-        # e.place(x=-200, y=-200)
+        
         b.place(x=2, y=2)
         f.place(x=2, y=2)
-
+        
         self.label = tk.Label(self, text='Click to start', bg='pink')
         self.label.place(relx=0.4, rely=0.0, relwidth=0.2, relheight=.1)
-
         self.place(relheight=1.0, relwidth=1.0)
         print()
 
     def move_frame(self):
-        # x = self.frame.winfo_x()
         y = round(random.uniform(self.winfo_height() / 10, self.winfo_height() * 9 / 10 - 16), 0)
-        # y = self.frame.winfo_y()
         x = round(random.uniform(self.winfo_height() / 10, self.winfo_width() * 9 / 10 - 42), 0)
+        
         self.frame.place(x=x)
         self.frame.place(y=y)
         update_clicks(self)
